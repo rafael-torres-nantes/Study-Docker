@@ -17,7 +17,7 @@ __Imagem e Container__ são recursos fundamentais do Docker:
 O fluxo é programarmos uma imagem e a executamos por meio de um container;
 
 
-## Onde encontrar imagem
+## Encontrar Imagem na Web
 
 As imagens podem ser encontradas no repositório do Docker: https://hub.docker.com
 
@@ -33,7 +33,7 @@ docker run <imagem>
 ```
 
 
-## Verificar containers executados
+## Verificar Containers Executados
 
 O comando __docker ps ou docker container ls__ exibe quais containers estão sendo executados no momento. Utilizando a __flag -a__, também podemos visualizar todos os containers já executados na máquina.
 
@@ -51,7 +51,7 @@ ou
 docker container ls -a
 ```
 
-## Executar container com interação
+## Executar Container com Interação
 
 Podemos rodar um container e deixá-lo __executando no terminal__utilizando a  __flag -it__. Desta maneira, podemos __executar comandos disponíveis no container__ que estamos utilizando o comando `run`.
 
@@ -72,7 +72,7 @@ docker run -it <imagem>
 
 Containers acabam gastando menos recursos para serem executados, por causa do seu uso específico.Enquanto VMs gastam mais recursos, porém podem exercer mais funções.
 
-## Executar container em background
+## Executar Container em Background
 
 Quando iniciamos um container que persiste, ele __ocupa o terminal__.Para evitar isso, podemos executar um container em background utilizando __flag -d__ (detached). Podemos verificar __containers em background com docker ps__ também.
 
@@ -85,7 +85,7 @@ Podemos executar um container em background com o seguinte comando:
 docker run -d <imagem>
 ```
 
-## Expor Portas
+## Portas
 
 Os containers do Docker não têm conexão com o exterior por padrão. Portanto, precisamos expor portas utilizando a __flag -p__ . Por exemplo, `-p 80:80` significa que o container estará acessível na porta 80.
 Desta maneira __o container estará acessível na porta 80__;
@@ -133,4 +133,47 @@ Aprendemos já a parar um container com o stop, para voltar a rodar um container
 ```bash
 docker start <id>
 ```
-> Lembre-se que o `docker run` sempre cria um novo container;
+> Lembre-se que o `docker run` sempre cria um novo container
+
+## Definindo Nome do Container
+
+odemos atribuir um nome específico a um container utilizando a __flag --name__. Se não especificarmos um nome, o container receberá um nome __aleatório__, o que pode ser problemático em um ambiente profissional.
+
+<p align="center">
+    <img src="/2 - Trabalhando com Containers/assets/dockerName.png" width="480" height="320">
+</p>
+
+
+A flag `--name` é utilizada juntamente com o comando `run`.
+```bash
+docker run -d -p 3000:80 --name applicationRafa <imagem>
+```
+
+## Verificando Logs
+
+Podemos verificar o registro de atividades de um container utilizando o comando `logs`. Utilizamos da seguinte maneira: __docker logs <id>__.
+
+<p align="center">
+    <img src="/2 - Trabalhando com Containers/assets/dockerLogs.png" width="480" height="320">
+</p>
+
+<p align="center">
+    <img src="/2 - Trabalhando com Containers/assets/dockerLogs1.png" width="480" height="320">
+</p>
+
+As __últimas ações__ realizadas no container serão exibidas no terminal, o que é útil para monitorar o comportamento e diagnosticar problemas.
+
+Por exemplo:
+```bash
+docker logs <id>
+```
+
+## Removendo Containers
+
+Podemos __remover um container__ da máquina em que estamos executando o Docker utilizando o comando  __docker -rm <id>__. Se o container eestiver em execução ainda, podemos utilizar a  __flag -f__(force) para forçar a remoção.
+
+Após a remoção, o container não será mais listado em `docker ps -a`.
+
+```bash
+docker rm -f <id>
+```
