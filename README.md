@@ -26,27 +26,14 @@ O __Docker Study__ é uma iniciativa para consolidar conhecimentos e fornecer um
 Este repositório está estruturado da seguinte maneira:
 
 - **Introdução**: Fundamentos iniciais sobre Docker.
-  - `build: section 01 and 02` (3 months ago)
 - **Trabalhando com Containers**: Criação e gestão de containers.
-  - `build: section 02`
 - **Imagens e Avançando Containers**: Trabalhando com imagens e técnicas avançadas.
-  - `feat: adding images to Docker` (2 months ago)
 - **Introduzindo Volumes aos Containers**: Persistência de dados com volumes.
-  - `feat: adding folders to repository` (2 months ago)
 - **Conectando Containers**: Técnicas para conectar containers.
-  - `feat: adding folders to repository` (2 months ago)
 - **Introdução ao YAML**: Conceitos básicos e uso de YAML no Docker.
-  - `feat: adding folders to repository` (2 months ago)
 - **Docker Compose**: Gerenciamento de múltiplos containers.
-  - `feat: adding folders to repository` (2 months ago)
 - **Docker Swarm**: Orquestração de containers.
-  - `feat: adding folders to repository` (2 months ago)
 - **Kubernetes**: Gerenciamento de clusters com Kubernetes.
-  - `feat: adding folders to repository` (2 months ago)
-- **LICENSE**: Licença do repositório.
-  - `Initial commit` (3 months ago)
-- **README.md**: Documento de introdução do repositório.
-  - `Initial commit` (3 months ago)
 
 Cada seção contém arquivos e tutoriais específicos para o tópico abordado, incluindo:
 - __assets__: Imagens e documentação do processo de aprendizado.
@@ -56,7 +43,3 @@ Cada seção contém arquivos e tutoriais específicos para o tópico abordado, 
 ## Conteúdos e Tutoriais
 
 Para mais detalhes sobre cada seção, consulte os arquivos README.md localizados nas respectivas pastas. Aproveite o conteúdo e sinta-se à vontade para contribuir com melhorias!
-
----
-
-Se precisar de ajustes ou adicionar mais informações, é só me avisar!
